@@ -6,6 +6,7 @@ import {
   TrendingUp, ExternalLink, ChevronLeft, Play, Pause,
   Sparkles, ShieldCheck, Award, Target, CheckCircle2
 } from "lucide-react";
+import heroRobotImg from "../assets/futuristic_humanoid_robot_hero.png";
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 
@@ -32,7 +33,7 @@ const SLIDES = [
     date: "August 11, 2026",
     readTime: "8 min read",
     views: "12.4K",
-    image: "/futuristic_humanoid_robot_hero.png",
+    image: heroRobotImg,
     accentColor: "#5078B6",
   },
   {
@@ -698,7 +699,7 @@ const FEATURED_STORIES = [
     author: "JAMES WHITFIELD",
     location: "SAN JOSE, CA",
     date: "AUG 11, 2026",
-    image: "/futuristic_humanoid_robot_hero.png",
+    image: heroRobotImg,
     fallbackImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&h=1200&fit=crop&auto=format",
     badgeColor: "bg-blue-400"
   },
@@ -1097,7 +1098,7 @@ const REPORTER_VIDEOS = [
     duration: "12:34",
     views: "42.8K",
     date: "Aug 11, 2026",
-    image: "/futuristic_humanoid_robot_hero.png",
+    image: heroRobotImg,
     fallbackImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1200&h=1200&fit=crop&auto=format",
     videoUrl: "https://www.youtube-nocookie.com/embed/29ECw6fWp1R0?autoplay=1",
     badgeBg: "bg-[#2563EB]/20 text-[#60A5FA] border-[#2563EB]/40",
@@ -1398,7 +1399,7 @@ const TOP_ROBOTICS_STORIES = [
     category: "INDUSTRY",
     title: "Figure AI Unveils Next-Gen Humanoid Robot",
     timeAgo: "2h ago",
-    image: "/futuristic_humanoid_robot_hero.png",
+    image: heroRobotImg,
     fallbackImage: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=1000&h=1200&fit=crop&auto=format",
     summary: "Figure AI introduces its flagship humanoid model with 24-DOF hand dexterity, real-time neural vision, and high-precision torque feedback.",
   },
@@ -1784,7 +1785,7 @@ const MOST_VIEWED_ITEMS = [
     pillTextDark: "text-[#80DEEA]",
     title: "Atlas Robot Breaks Speed Record in Warehouse Test",
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop&auto=format",
-    fallbackImage: "/futuristic_humanoid_robot_hero.png",
+    fallbackImage: heroRobotImg,
   },
   {
     id: "mv2",
@@ -1795,7 +1796,7 @@ const MOST_VIEWED_ITEMS = [
     pillTextDark: "text-[#93C5FD]",
     title: "The $20K Humanoid: Who Can Afford It?",
     image: "https://images.unsplash.com/photo-1655393001768-d946c97d6fd1?w=600&h=400&fit=crop&auto=format",
-    fallbackImage: "/futuristic_humanoid_robot_hero.png",
+    fallbackImage: heroRobotImg,
   },
   {
     id: "mv3",
@@ -1806,7 +1807,7 @@ const MOST_VIEWED_ITEMS = [
     pillTextDark: "text-[#C084FC]",
     title: "Robots in Restaurants: The New Front of House",
     image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&h=400&fit=crop&auto=format",
-    fallbackImage: "/futuristic_humanoid_robot_hero.png",
+    fallbackImage: heroRobotImg,
   },
 ];
 
