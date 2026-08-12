@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+
+/* Font utility classes strictly limited to sans-serif and Rajdhani */
+.font-sans-strict {
+  font-family: sans-serif;
+}
+
+.font-rajdhani {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.font-orbitron {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.font-dm {
+  font-family: sans-serif;
+}
+
+.font-mono {
+  font-family: sans-serif;
+}
+
+

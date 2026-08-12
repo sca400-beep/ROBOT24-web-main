@@ -1,0 +1,288 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: #071F5A;
+  --card: #ffffff;
+  --card-foreground: #071F5A;
+  --popover: #ffffff;
+  --popover-foreground: #071F5A;
+  --primary: #071F5A;
+  --primary-foreground: #ffffff;
+  --secondary: #F5F7FC;
+  --secondary-foreground: #071F5A;
+  --muted: #F0F3FA;
+  --muted-foreground: #3D5A9A;
+  --accent: #5078B6;
+  --accent-foreground: #ffffff;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(7, 31, 90, 0.08);
+  --input: transparent;
+  --input-background: #F5F7FC;
+  --switch-background: #5078B6;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #5078B6;
+  --chart-1: #5078B6;
+  --chart-2: #071F5A;
+  --chart-3: #3D5A9A;
+  --chart-4: #8AACD8;
+  --chart-5: #B8CCF0;
+  --radius: 0.5rem;
+  --sidebar: #071F5A;
+  --sidebar-foreground: #E8EFFE;
+  --sidebar-primary: #5078B6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #0D2E78;
+  --sidebar-accent-foreground: #E8EFFE;
+  --sidebar-border: rgba(80, 120, 182, 0.2);
+  --sidebar-ring: #5078B6;
+}
+
+.dark {
+  --background: #071F5A;
+  --foreground: #E8EFFE;
+  --card: #0D2E78;
+  --card-foreground: #E8EFFE;
+  --popover: #0D2E78;
+  --popover-foreground: #E8EFFE;
+  --primary: #5078B6;
+  --primary-foreground: #ffffff;
+  --secondary: #0A2560;
+  --secondary-foreground: #E8EFFE;
+  --muted: #0A2560;
+  --muted-foreground: #8AACD8;
+  --accent: #5078B6;
+  --accent-foreground: #ffffff;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(80, 120, 182, 0.2);
+  --input: #0A2560;
+  --input-background: #0A2560;
+  --switch-background: #5078B6;
+  --ring: #5078B6;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #5078B6;
+  --chart-2: #8AACD8;
+  --chart-3: #3D5A9A;
+  --chart-4: #B8CCF0;
+  --chart-5: #E8EFFE;
+  --sidebar: #050F2E;
+  --sidebar-foreground: #E8EFFE;
+  --sidebar-primary: #5078B6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #071F5A;
+  --sidebar-accent-foreground: #E8EFFE;
+  --sidebar-border: rgba(80, 120, 182, 0.15);
+  --sidebar-ring: #5078B6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-vogue: sans-serif;
+  --font-orbitron: 'Rajdhani', sans-serif;
+  --font-rajdhani: 'Rajdhani', sans-serif;
+  --font-dm: sans-serif;
+  --font-mono: sans-serif;
+  --font-sans: sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: sans-serif;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+    font-family: sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  code, pre, kbd, samp {
+    font-family: sans-serif;
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
+
+/* ════ FUTURISTIC / CYBERPUNK HUD UTILITIES ════ */
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { transform: translateY(1000%); opacity: 0; }
+}
+
+@keyframes radarPulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+@keyframes soundwave {
+  0%, 100% { height: 6px; }
+  50% { height: 18px; }
+}
+
+@keyframes cyberGlint {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+.font-vogue {
+  font-family: sans-serif;
+}
+
+.font-orbitron {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.font-rajdhani {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.font-dm {
+  font-family: sans-serif;
+}
+
+.font-mono {
+  font-family: sans-serif;
+}
+
+/* Sci-fi chamfered button clip-path */
+.cyber-cut-btn {
+  clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+}
+
+.cyber-cut-badge {
+  clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+.cyber-cut-card {
+  clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
+}
+
+/* Animated scanline over media banners */
+.scanline-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00f0ff, transparent);
+  box-shadow: 0 0 15px #00f0ff, 0 0 30px #00f0ff;
+  animation: scanline 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  pointer-events: none;
+  z-index: 25;
+}
+
+/* Tech grid overlay */
+.cyber-grid-overlay {
+  background-image: 
+    linear-gradient(rgba(0, 240, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Glowing cyberpunk shadows */
+.shadow-cyber-cyan {
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.35), inset 0 0 15px rgba(0, 240, 255, 0.15);
+}
+
+.shadow-cyber-blue {
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.35), inset 0 0 15px rgba(59, 130, 246, 0.15);
+}
+
