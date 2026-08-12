@@ -1214,8 +1214,8 @@ function ReporterVideosSection({ dark }: { dark: boolean }) {
             {/* VIEW ALL Curved Pill Button */}
             <button
               className={`r24-btn r24-reporter-viewall-btn inline-flex items-center gap-2 px-5 py-2 rounded-xl text-xs font-mono font-bold tracking-[0.18em] uppercase transition-all duration-300 cursor-pointer shadow-sm group/viewall active:scale-[0.98] ${dark
-                  ? "bg-slate-900/90 text-white border border-slate-700/80 hover:bg-[#2563EB] hover:border-[#2563EB]"
-                  : "bg-white text-[#05153E] border border-slate-300 hover:bg-[#071F5A] hover:text-white hover:border-[#071F5A]"
+                ? "bg-slate-900/90 text-white border border-slate-700/80 hover:bg-[#2563EB] hover:border-[#2563EB]"
+                : "bg-white text-[#05153E] border border-slate-300 hover:bg-[#071F5A] hover:text-white hover:border-[#071F5A]"
                 }`}
               style={{ fontFamily: "sans-serif" }}
             >
@@ -1538,20 +1538,20 @@ function TopStoriesAndLiveTimelineSection({ dark }: { dark: boolean }) {
                         key={story.id}
                         onClick={() => setSelectedStoryId(story.id)}
                         className={`r24-top-story-item group cursor-pointer p-3 rounded-xl transition-all duration-300 border ${isActive
-                            ? dark
-                              ? "bg-slate-900/90 border-[#2563EB]/50 shadow-md"
-                              : "bg-white border-[#2563EB]/40 shadow-sm"
-                            : dark
-                              ? "bg-transparent border-transparent hover:bg-slate-900/40"
-                              : "bg-transparent border-transparent hover:bg-white/60"
+                          ? dark
+                            ? "bg-slate-900/90 border-[#2563EB]/50 shadow-md"
+                            : "bg-white border-[#2563EB]/40 shadow-sm"
+                          : dark
+                            ? "bg-transparent border-transparent hover:bg-slate-900/40"
+                            : "bg-transparent border-transparent hover:bg-white/60"
                           }`}
                       >
                         <div className="r24-top-story-item-inner flex items-start gap-3.5">
                           {/* Big Number */}
                           <span
                             className={`r24-top-story-number text-3xl sm:text-4xl font-extrabold font-mono leading-none transition-colors duration-300 flex-shrink-0 ${isActive
-                                ? "text-[#2563EB] dark:text-[#60A5FA]"
-                                : "text-slate-300 dark:text-slate-700 group-hover:text-slate-400"
+                              ? "text-[#2563EB] dark:text-[#60A5FA]"
+                              : "text-slate-300 dark:text-slate-700 group-hover:text-slate-400"
                               }`}
                             style={{ fontFamily: "'Rajdhani', sans-serif" }}
                           >
@@ -1566,12 +1566,12 @@ function TopStoriesAndLiveTimelineSection({ dark }: { dark: boolean }) {
 
                             <h3
                               className={`r24-top-story-title text-base sm:text-lg font-bold leading-tight transition-colors duration-200 ${isActive
-                                  ? dark
-                                    ? "text-white"
-                                    : "text-[#05153E]"
-                                  : dark
-                                    ? "text-slate-300 group-hover:text-white"
-                                    : "text-slate-700 group-hover:text-[#05153E]"
+                                ? dark
+                                  ? "text-white"
+                                  : "text-[#05153E]"
+                                : dark
+                                  ? "text-slate-300 group-hover:text-white"
+                                  : "text-slate-700 group-hover:text-[#05153E]"
                                 }`}
                               style={{ fontFamily: "'Rajdhani', sans-serif" }}
                             >
@@ -1668,17 +1668,15 @@ function TopStoriesAndLiveTimelineSection({ dark }: { dark: boolean }) {
                       <div
                         key={item.id}
                         onClick={() => setActiveTimelineId(item.id)}
-                        className={`r24-timeline-item relative flex items-stretch gap-3 sm:gap-4 group/item cursor-pointer select-none ${
-                          isLast ? "pb-0" : "pb-4 sm:pb-5"
-                        }`}
+                        className={`r24-timeline-item relative flex items-stretch gap-3 sm:gap-4 group/item cursor-pointer select-none ${isLast ? "pb-0" : "pb-4 sm:pb-5"
+                          }`}
                       >
 
                         {/* Left Time Stamp */}
-                        <div className={`r24-timeline-timestamp w-[58px] sm:w-[66px] text-right text-[11px] sm:text-xs font-mono font-bold pt-0.5 flex-shrink-0 transition-colors ${
-                          isActive
+                        <div className={`r24-timeline-timestamp w-[58px] sm:w-[66px] text-right text-[11px] sm:text-xs font-mono font-bold pt-0.5 flex-shrink-0 transition-colors ${isActive
                             ? "text-slate-900 dark:text-white font-extrabold"
                             : "text-slate-500 dark:text-slate-400 group-hover/item:text-slate-700 dark:group-hover/item:text-slate-300"
-                        }`}>
+                          }`}>
                           {item.time}
                         </div>
 
@@ -1686,22 +1684,20 @@ function TopStoriesAndLiveTimelineSection({ dark }: { dark: boolean }) {
                         <div className="r24-timeline-node-col relative w-6 flex flex-col items-center justify-start flex-shrink-0 pt-0.5 self-stretch">
                           {/* Vertical Line Segment passing behind circle */}
                           <div
-                            className={`r24-timeline-node-line absolute w-[2px] bg-slate-300 dark:bg-slate-700/80 left-1/2 -translate-x-1/2 ${
-                              isFirst
+                            className={`r24-timeline-node-line absolute w-[2px] bg-slate-300 dark:bg-slate-700/80 left-1/2 -translate-x-1/2 ${isFirst
                                 ? "top-2.5 bottom-0"
                                 : isLast
-                                ? "top-0 h-3.5"
-                                : "top-0 bottom-0"
-                            }`}
+                                  ? "top-0 h-3.5"
+                                  : "top-0 bottom-0"
+                              }`}
                           />
 
                           {/* Node Circle Dot */}
                           <div
-                            className={`r24-timeline-node-circle relative w-3.5 h-3.5 rounded-full border-2 transition-all duration-300 flex-shrink-0 z-10 ${
-                              isActive
+                            className={`r24-timeline-node-circle relative w-3.5 h-3.5 rounded-full border-2 transition-all duration-300 flex-shrink-0 z-10 ${isActive
                                 ? "bg-[#2563EB] border-white dark:border-slate-900 ring-4 ring-[#2563EB]/25 dark:ring-[#3B82F6]/30 shadow-sm scale-110"
                                 : "bg-slate-400 dark:bg-slate-600 border-white dark:border-slate-900 group-hover/item:bg-blue-400 group-hover/item:scale-110"
-                            }`}
+                              }`}
                           />
                         </div>
 
@@ -1712,11 +1708,10 @@ function TopStoriesAndLiveTimelineSection({ dark }: { dark: boolean }) {
                           </span>
 
                           <h3
-                            className={`r24-timeline-item-title text-base sm:text-lg font-bold leading-snug transition-colors ${
-                              isActive
+                            className={`r24-timeline-item-title text-base sm:text-lg font-bold leading-snug transition-colors ${isActive
                                 ? dark ? "text-white" : "text-[#05153E]"
                                 : dark ? "text-white/80 group-hover/item:text-white" : "text-slate-700 group-hover/item:text-[#2563EB]"
-                            }`}
+                              }`}
                             style={{ fontFamily: "'Rajdhani', sans-serif" }}
                           >
                             {item.title}
@@ -1733,11 +1728,10 @@ function TopStoriesAndLiveTimelineSection({ dark }: { dark: boolean }) {
                                 className="r24-timeline-expanded-wrapper overflow-hidden"
                               >
                                 <div
-                                  className={`r24-timeline-expanded-card p-3 sm:p-3.5 rounded-2xl border transition-all duration-300 flex flex-col sm:flex-row gap-3 sm:gap-3.5 items-center ${
-                                    dark
+                                  className={`r24-timeline-expanded-card p-3 sm:p-3.5 rounded-2xl border transition-all duration-300 flex flex-col sm:flex-row gap-3 sm:gap-3.5 items-center ${dark
                                       ? "bg-slate-900/90 border-slate-800 shadow-lg shadow-black/20"
                                       : "bg-white border-slate-200/90 shadow-[0_4px_20px_rgba(7,31,90,0.06)]"
-                                  }`}
+                                    }`}
                                 >
                                   <img
                                     src={item.expandedCard.thumbnail}
@@ -1852,7 +1846,7 @@ function MostViewedAndPopularSection({ dark }: { dark: boolean }) {
     <section className="r24-section r24-most-viewed-popular-section relative z-10 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-5">
       <InViewSection>
         <div className="r24-most-viewed-popular-grid grid grid-cols-1 lg:grid-cols-2 gap-7 items-stretch">
-          
+
           {/* ════════════════════════════════════════════════════════════════
               LEFT SECTION: MOST VIEWED
              ════════════════════════════════════════════════════════════════ */}
@@ -1861,9 +1855,8 @@ function MostViewedAndPopularSection({ dark }: { dark: boolean }) {
             <div className="r24-most-viewed-header flex items-center gap-3 mb-6">
               <div className="r24-most-viewed-accent-bar w-1.5 h-6 bg-gradient-to-b from-[#2563EB] to-[#60A5FA] rounded-full flex-shrink-0" />
               <h2
-                className={`r24-most-viewed-title text-xl sm:text-2xl font-extrabold tracking-wider uppercase leading-tight ${
-                  dark ? "text-white" : "text-[#05153E]"
-                }`}
+                className={`r24-most-viewed-title text-xl sm:text-2xl font-extrabold tracking-wider uppercase leading-tight ${dark ? "text-white" : "text-[#05153E]"
+                  }`}
                 style={{ fontFamily: "'Rajdhani', sans-serif" }}
               >
                 MOST VIEWED
@@ -1894,9 +1887,8 @@ function MostViewedAndPopularSection({ dark }: { dark: boolean }) {
                     {/* Category Pill Tag with Rajdhani font */}
                     <div className="r24-most-viewed-category-row">
                       <span
-                        className={`r24-most-viewed-category-badge inline-flex items-center gap-1 px-3 py-1 rounded-lg text-xs font-mono font-bold tracking-wider uppercase ${
-                          dark ? `${item.pillBgDark} ${item.pillTextDark}` : `${item.pillBgLight} ${item.pillTextLight}`
-                        }`}
+                        className={`r24-most-viewed-category-badge inline-flex items-center gap-1 px-3 py-1 rounded-lg text-xs font-mono font-bold tracking-wider uppercase ${dark ? `${item.pillBgDark} ${item.pillTextDark}` : `${item.pillBgLight} ${item.pillTextLight}`
+                          }`}
                         style={{ fontFamily: "'Rajdhani', sans-serif" }}
                       >
                         • {item.category}
@@ -1905,11 +1897,10 @@ function MostViewedAndPopularSection({ dark }: { dark: boolean }) {
 
                     {/* Title with Rajdhani Heading Font */}
                     <h3
-                      className={`r24-most-viewed-item-title text-base sm:text-lg font-bold leading-snug transition-colors line-clamp-2 ${
-                        dark
+                      className={`r24-most-viewed-item-title text-base sm:text-lg font-bold leading-snug transition-colors line-clamp-2 ${dark
                           ? "text-slate-100 group-hover:text-[#60A5FA]"
                           : "text-[#05153E] group-hover:text-[#2563EB]"
-                      }`}
+                        }`}
                       style={{ fontFamily: "'Rajdhani', sans-serif" }}
                     >
                       {item.title}
@@ -1928,9 +1919,8 @@ function MostViewedAndPopularSection({ dark }: { dark: boolean }) {
             <div className="r24-popular-posts-header flex items-center gap-3 mb-6">
               <div className="r24-popular-posts-accent-bar w-1.5 h-6 bg-gradient-to-b from-[#2563EB] to-[#60A5FA] rounded-full flex-shrink-0" />
               <h2
-                className={`r24-popular-posts-title text-xl sm:text-2xl font-extrabold tracking-wider uppercase leading-tight ${
-                  dark ? "text-white" : "text-[#05153E]"
-                }`}
+                className={`r24-popular-posts-title text-xl sm:text-2xl font-extrabold tracking-wider uppercase leading-tight ${dark ? "text-white" : "text-[#05153E]"
+                  }`}
                 style={{ fontFamily: "'Rajdhani', sans-serif" }}
               >
                 POPULAR POSTS
@@ -1946,11 +1936,10 @@ function MostViewedAndPopularSection({ dark }: { dark: boolean }) {
                 >
                   {/* Number Badge with Rajdhani font */}
                   <div
-                    className={`r24-popular-posts-number-badge w-9 h-9 sm:w-10 sm:h-10 rounded-xl font-extrabold text-sm sm:text-base flex items-center justify-center flex-shrink-0 transition-colors ${
-                      dark
+                    className={`r24-popular-posts-number-badge w-9 h-9 sm:w-10 sm:h-10 rounded-xl font-extrabold text-sm sm:text-base flex items-center justify-center flex-shrink-0 transition-colors ${dark
                         ? "bg-[#1E293B] text-[#60A5FA] group-hover:bg-[#3B82F6] group-hover:text-white"
                         : "bg-[#EBF3FE] text-[#3B82F6] group-hover:bg-[#3B82F6] group-hover:text-white"
-                    }`}
+                      }`}
                     style={{ fontFamily: "'Rajdhani', sans-serif" }}
                   >
                     {item.number}
@@ -1966,11 +1955,10 @@ function MostViewedAndPopularSection({ dark }: { dark: boolean }) {
                     </p>
 
                     <h3
-                      className={`r24-popular-posts-item-title text-base sm:text-lg font-bold leading-snug transition-colors line-clamp-2 ${
-                        dark
+                      className={`r24-popular-posts-item-title text-base sm:text-lg font-bold leading-snug transition-colors line-clamp-2 ${dark
                           ? "text-slate-100 group-hover:text-[#60A5FA]"
                           : "text-[#05153E] group-hover:text-[#2563EB]"
-                      }`}
+                        }`}
                       style={{ fontFamily: "'Rajdhani', sans-serif" }}
                     >
                       {item.title}
