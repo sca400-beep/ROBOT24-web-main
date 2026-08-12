@@ -7,6 +7,7 @@ import {
   Sparkles, ShieldCheck, Award, Target, CheckCircle2
 } from "lucide-react";
 import heroRobotImg from "../assets/futuristic_humanoid_robot_hero.png";
+import robot24Logo from "../images/robot24-logo.svg";
 
 // ── Data ─────────────────────────────────────────────────────────────────────
 
@@ -2072,37 +2073,13 @@ export default function App() {
           <div className="r24-navbar-row flex items-center justify-between h-[62px] gap-6">
 
             {/* Logo */}
-            <a href="#" className="r24-link r24-nav-logo-link flex-shrink-0 flex items-center gap-3 group" style={{ fontFamily: "'Rajdhani', sans-serif" }}>
-              {/* Geometric icon mark */}
-              <div className="r24-nav-logo-icon-box relative w-9 h-9 flex-shrink-0">
-                <div
-                  className="r24-nav-logo-icon-bg absolute inset-0 rounded-lg transition-all duration-300 group-hover:scale-110"
-                  style={{
-                    background: "linear-gradient(135deg, #071F5A 0%, #5078B6 100%)",
-                    boxShadow: dark ? "0 0 16px rgba(80,120,182,0.5)" : "0 2px 12px rgba(7,31,90,0.25)",
-                  }}
-                />
-                {/* Inner circuit lines */}
-                <svg className="r24-nav-logo-svg absolute inset-0 w-full h-full p-2" viewBox="0 0 20 20" fill="none">
-                  <circle cx="10" cy="10" r="3" stroke="white" strokeWidth="1.5" />
-                  <line x1="10" y1="2" x2="10" y2="7" stroke="white" strokeWidth="1.2" strokeLinecap="round" />
-                  <line x1="10" y1="13" x2="10" y2="18" stroke="white" strokeWidth="1.2" strokeLinecap="round" />
-                  <line x1="2" y1="10" x2="7" y2="10" stroke="white" strokeWidth="1.2" strokeLinecap="round" />
-                  <line x1="13" y1="10" x2="18" y2="10" stroke="white" strokeWidth="1.2" strokeLinecap="round" />
-                  <circle cx="10" cy="2" r="1" fill="white" />
-                  <circle cx="10" cy="18" r="1" fill="white" />
-                  <circle cx="2" cy="10" r="1" fill="white" />
-                  <circle cx="18" cy="10" r="1" fill="white" />
-                </svg>
-              </div>
-              <div className="r24-nav-logo-text-box flex flex-col leading-none">
-                <span className={`r24-nav-logo-title text-[20px] font-extrabold tracking-wider leading-none ${fg}`} style={{ fontFamily: "'Rajdhani', sans-serif" }}>
-                  ROBOT<span className="r24-nav-logo-title-accent" style={{ color: "#5078B6" }}>24</span>
-                </span>
-                <span className="r24-nav-logo-domain text-[9px] font-bold tracking-[0.22em] mt-0.5" style={{ color: "#5078B6", fontFamily: "sans-serif" }}>
-                  .COM
-                </span>
-              </div>
+            <a href="#" className="r24-link r24-nav-logo-link flex-shrink-0 group">
+              <img
+                src={robot24Logo}
+                alt="ROBOT24 Logo"
+                className="r24-nav-logo-img h-9 object-contain transition-opacity duration-300 group-hover:opacity-80"
+                style={{ width: "50%" }}
+              />
             </a>
 
             {/* Desktop Nav */}
@@ -2185,30 +2162,45 @@ export default function App() {
           </div>
 
           {/* Search bar */}
-          {searchOpen && (
-            <motion.div
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              className="r24-nav-search-modal overflow-hidden pb-3"
-            >
-              <div className="r24-nav-search-input-wrap relative">
-                <Search size={15} className="r24-nav-search-icon absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" style={{ color: "#5078B6" }} />
-                <input
-                  autoFocus
-                  type="text"
-                  placeholder="Search articles, robots, journalists…"
-                  className="r24-nav-search-input w-full pl-10 pr-4 py-2.5 rounded-xl text-sm focus:outline-none focus:ring-2"
-                  style={{
-                    background: dark ? "rgba(10,37,96,0.8)" : "rgba(245,247,252,1)",
-                    border: "1px solid",
-                    borderColor: dark ? "rgba(80,120,182,0.3)" : "rgba(7,31,90,0.1)",
-                    color: dark ? "#E8EFFE" : "#071F5A",
-                    ringColor: "#5078B6",
-                  }}
-                />
-              </div>
-            </motion.div>
-          )}
+          <AnimatePresence>
+            {searchOpen && (
+              <motion.div
+                key="search-bar"
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.2, ease: "easeInOut" }}
+                className="r24-nav-search-modal overflow-hidden"
+                style={{ borderTop: `1px solid ${dark ? "rgba(80,120,182,0.15)" : "rgba(7,31,90,0.08)"}` }}
+              >
+                <div className="r24-nav-search-input-wrap relative py-3">
+                  <Search size={15} className="r24-nav-search-icon absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" style={{ color: "#5078B6", top: "calc(50% + 6px)" }} />
+                  <input
+                    autoFocus
+                    type="text"
+                    placeholder="Search articles, robots, journalists…"
+                    className="r24-nav-search-input w-full pl-10 pr-10 py-2.5 rounded-xl text-sm focus:outline-none focus:ring-2"
+                    style={{
+                      background: dark ? "rgba(10,37,96,0.8)" : "rgba(245,247,252,1)",
+                      border: "1.5px solid",
+                      borderColor: dark ? "rgba(80,120,182,0.35)" : "rgba(80,120,182,0.25)",
+                      color: dark ? "#E8EFFE" : "#071F5A",
+                      boxShadow: dark ? "0 2px 12px rgba(7,31,90,0.4)" : "0 2px 12px rgba(7,31,90,0.08)",
+                      outline: "none",
+                    }}
+                  />
+                  <button
+                    onClick={() => setSearchOpen(false)}
+                    className="r24-btn absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded-lg opacity-50 hover:opacity-100 transition-opacity"
+                    style={{ color: dark ? "#8AACD8" : "#5078B6", top: "calc(50% + 6px)" }}
+                    aria-label="Close search"
+                  >
+                    <X size={14} />
+                  </button>
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
         {/* Mobile menu */}
