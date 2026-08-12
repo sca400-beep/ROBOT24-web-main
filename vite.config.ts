@@ -17,6 +17,7 @@ function customAssetResolver() {
 }
 
 export default defineConfig({
+  base: './',
   plugins: [
     customAssetResolver(),
     // React and Tailwind plugins
