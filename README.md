@@ -4,10 +4,10 @@ This is the official web application for **ROBOT24 - Next-Gen Robotics & AI Plat
 
 ---
 
-### 🌐 Live Platform & Links
+### 🌐 Live Website & Links
 
-* 🚀 **ROBOT24 Live Demo:** [https://sca400-beep.github.io/ROBOT24-web-main/](https://sca400-beep.github.io/ROBOT24-web-main/)
-* 📦 **GitHub Repository:** [https://github.com/sca400-beep/ROBOT24-web-main](https://github.com/sca400-beep/ROBOT24-web-main)
+* 🚀 **ROBOT24 Live Web App (GitHub Pages):** [https://sca400-beep.github.io/ROBOT24-web-main/](https://sca400-beep.github.io/ROBOT24-web-main/)
+* 📦 **GitHub Source Repository:** [https://github.com/sca400-beep/ROBOT24-web-main](https://github.com/sca400-beep/ROBOT24-web-main)
 
 ---
 
@@ -25,10 +25,10 @@ Run `npm run dev` to start the local development server:
 npm run dev
 ```
 
-### Build
-Run `npm run build` to build the production bundle:
+### Build & Deploy
+To build and deploy changes to GitHub Pages:
 ```bash
-npm run build
+npm run build && npm run deploy
 ```
 
 ---
