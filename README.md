@@ -4,10 +4,10 @@ This is the official web application for **ROBOT24 - Next-Gen Robotics & AI Plat
 
 ---
 
-### 🔗 Quick Links
+### 🌐 Live Platform & Links
 
+* 🚀 **ROBOT24 Live Demo:** [https://sca400-beep.github.io/ROBOT24-web-main/](https://sca400-beep.github.io/ROBOT24-web-main/)
 * 📦 **GitHub Repository:** [https://github.com/sca400-beep/ROBOT24-web-main](https://github.com/sca400-beep/ROBOT24-web-main)
-* 🌐 **Local Web App:** [http://localhost:5179/](http://localhost:5179/)
 
 ---
 
