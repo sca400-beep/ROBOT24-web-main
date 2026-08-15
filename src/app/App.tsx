@@ -2339,14 +2339,13 @@ export default function App() {
           <div className="r24-footer-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
             {/* Brand */}
             <div className="r24-footer-brand-col">
-              <div className="r24-footer-brand-header flex items-center gap-2 mb-3" style={{ fontFamily: "'Rajdhani', sans-serif" }}>
-                <div className="r24-footer-brand-icon-box w-7 h-7 rounded bg-[#5078B6] flex items-center justify-center">
-                  <Bot size={14} className="r24-footer-brand-icon text-white" />
-                </div>
-                <span className={`r24-footer-brand-title text-lg font-extrabold tracking-wider ${fg}`}>
-                  ROBOT<span className="r24-footer-brand-accent text-[#5078B6]">24</span>
-                </span>
-              </div>
+              <a href="#" className="r24-link r24-footer-logo-link inline-block mb-3 group">
+                <img
+                  src={robot24Logo}
+                  alt="ROBOT24 Logo"
+                  className="r24-footer-logo-img h-8 object-contain transition-opacity duration-300 group-hover:opacity-80"
+                />
+              </a>
               <p className={`r24-footer-brand-desc text-xs leading-relaxed ${muted} mb-4 max-w-[220px]`}>
                 The world's leading robotics intelligence platform. Trusted by engineers, investors, and policy makers.
               </p>
