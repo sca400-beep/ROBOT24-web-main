@@ -2343,7 +2343,8 @@ export default function App() {
                 <img
                   src={robot24Logo}
                   alt="ROBOT24 Logo"
-                  className="r24-footer-logo-img h-8 object-contain transition-opacity duration-300 group-hover:opacity-80"
+                  className="r24-footer-logo-img h-5 sm:h-6 object-contain transition-opacity duration-300 group-hover:opacity-80"
+                  style={{ maxHeight: "24px", width: "auto" }}
                 />
               </a>
               <p className={`r24-footer-brand-desc text-xs leading-relaxed ${muted} mb-4 max-w-[220px]`}>
